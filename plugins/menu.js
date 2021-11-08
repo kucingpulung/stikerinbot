@@ -16,8 +16,7 @@ const defaultMenu = {
   body: '├ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+terimakasih sudah menggunakan bot ini.
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
