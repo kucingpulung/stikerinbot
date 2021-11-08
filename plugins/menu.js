@@ -290,34 +290,34 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         }
       }, {}), { waitForAck: true })
     }
-    // gunakan ini jika kamu menggunakan whatsapp bisnis
-    //   throw `
-    // ┌〔 DAFTAR MENU 〕
-    // ├ ${_p + command} all
-    // ├ ${_p + command} game
-    // ├ ${_p + command} xp
-    // ├ ${_p + command} stiker
-    // ├ ${_p + command} kerang
-    // ├ ${_p + command} quotes
-    // ├ ${_p + command} admin
-    // ├ ${_p + command} group
-    // ├ ${_p + command} premium
-    // ├ ${_p + command} internet
-    // ├ ${_p + command} anonymous
-    // ├ ${_p + command} nulis
-    // ├ ${_p + command} downloader
-    // ├ ${_p + command} tools
-    // ├ ${_p + command} fun
-    // ├ ${_p + command} database
-    // ├ ${_p + command} vote
-    // ├ ${_p + command} quran
-    // ├ ${_p + command} audio
-    // ├ ${_p + command} jadibot
-    // ├ ${_p + command} info
-    // ├ ${_p + command} tanpa kategori
-    // ├ ${_p + command} owner
-    // └────  
-    //     `.trim()
+gunakan ini jika kamu menggunakan whatsapp bisnis
+throw `
+┌〔 DAFTAR MENU 〕
+├ ${_p + command} all
+├ ${_p + command} game
+├ ${_p + command} xp
+├ ${_p + command} stiker
+├ ${_p + command} kerang
+├ ${_p + command} quotes
+├ ${_p + command} admin
+├ ${_p + command} group
+├ ${_p + command} premium
+├ ${_p + command} internet
+├ ${_p + command} anonymous
+├ ${_p + command} nulis
+├ ${_p + command} downloader
+├ ${_p + command} tools
+├ ${_p + command} fun
+├ ${_p + command} database
+├ ${_p + command} vote
+├${_p + command} quran
+├ ${_p + command} audio
+├ ${_p + command} jadibot
+├ ${_p + command} info
+├ ${_p + command} tanpa kategori
+├ ${_p + command} owner
+└────  
+`.trim()
     let groups = {}
     for (let tag in tags) {
       groups[tag] = []
@@ -367,7 +367,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'donasi ngapa.. biar ga lemot', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/d6288456a7afb70b9df2c.jpg")).buffer(), text.trim(), 'donasi ngapa.. biar ga lemot', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
